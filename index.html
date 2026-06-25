@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     
-    <!-- ===== TÍTULO Y PWA (Manifest y Service Worker) ===== -->
+    <!-- ===== TÍTULO Y PWA ===== -->
     <title>Donación de Órganos</title>
     <link rel="manifest" href="manifest.json">
     <link rel="icon" type="image/png" sizes="192x192" href="icon-192.png">
@@ -53,7 +53,6 @@
             height: 100vh;
             width: 100vw;
         }
-
         #stars-canvas {
             position: fixed;
             top: 0;
@@ -84,9 +83,7 @@
             position: relative;
             z-index: 2;
         }
-        #loader .logo span {
-            color: var(--primary);
-        }
+        #loader .logo span { color: var(--primary); }
         #loader .sub {
             font-weight: 300;
             color: var(--text-muted);
@@ -160,8 +157,7 @@
             cursor: pointer;
             transition: 0.3s;
         }
-        .menu a:hover,
-        .menu a.active {
+        .menu a:hover, .menu a.active {
             background: var(--primary);
             color: #fff;
             box-shadow: 0 0 20px rgba(193, 18, 31, 0.3);
@@ -187,14 +183,8 @@
             animation: fadeUp 0.5s ease;
         }
         @keyframes fadeUp {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
         }
 
         /* ===== INTRO ===== */
@@ -206,18 +196,13 @@
             font-size: 5rem;
             animation: pulse 2.5s ease-in-out infinite;
         }
-        @keyframes pulse {
-            0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.08); }
-        }
+        @keyframes pulse { 0%,100% { transform: scale(1); } 50% { transform: scale(1.08); } }
         #intro h1 {
             font-family: 'Montserrat', sans-serif;
             font-size: 3.2rem;
             font-weight: 900;
         }
-        #intro h1 span {
-            color: var(--primary);
-        }
+        #intro h1 span { color: var(--primary); }
         #intro p {
             max-width: 640px;
             font-size: 1.15rem;
@@ -330,7 +315,7 @@
             animation: shake 0.4s ease;
         }
         @keyframes shake {
-            0%, 100% { transform: translateX(0); }
+            0%,100% { transform: translateX(0); }
             25% { transform: translateX(-10px); }
             75% { transform: translateX(10px); }
         }
@@ -386,7 +371,7 @@
             color: #fff;
         }
 
-        /* ===== INFO MEJORADA ===== */
+        /* ===== INFO ===== */
         #info {
             justify-content: flex-start;
             padding-top: 90px;
@@ -407,9 +392,7 @@
             font-size: 2.4rem;
             color: #fff;
         }
-        .info-hero h2 span {
-            color: var(--primary);
-        }
+        .info-hero h2 span { color: var(--primary); }
         .info-hero .sub {
             color: var(--text-muted);
             font-size: 1.1rem;
@@ -471,9 +454,7 @@
             transition: 0.6s;
             pointer-events: none;
         }
-        .info-card:hover::before {
-            transform: scale(1.2);
-        }
+        .info-card:hover::before { transform: scale(1.2); }
         .info-card:hover {
             transform: translateY(-8px);
             border-color: var(--primary);
@@ -584,7 +565,7 @@
             box-shadow: 0 0 60px rgba(193, 18, 31, 0.4);
         }
 
-        /* ===== VIDEOS (NUEVA GALERÍA VIMEO) ===== */
+        /* ===== VIDEOS (VIMEO) ===== */
         #videos {
             justify-content: flex-start;
             padding-top: 90px;
@@ -600,12 +581,12 @@
         }
         .vimeo-grid iframe {
             width: 100%;
-            aspect-ratio: 16 / 9;
+            aspect-ratio: 16/9;
             border-radius: 16px;
             border: 1px solid rgba(255, 255, 255, 0.06);
             background: #000;
             transition: 0.3s ease;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.4);
         }
         .vimeo-grid iframe:hover {
             transform: scale(1.02);
@@ -770,9 +751,7 @@
             font-size: 1.6rem;
             flex-shrink: 0;
         }
-        .juego-opts button .opt-text {
-            flex: 1;
-        }
+        .juego-opts button .opt-text { flex: 1; }
         .juego-opts button .opt-effect {
             font-size: 0.75rem;
             color: var(--text-muted);
@@ -800,7 +779,7 @@
             flex-wrap: wrap;
             gap: 8px;
             margin-top: 12px;
-            background: rgba(0, 0, 0, 0.2);
+            background: rgba(0,0,0,0.2);
             padding: 10px;
             border-radius: 16px;
             font-size: 0.8rem;
@@ -832,9 +811,7 @@
             box-shadow: 0 0 15px var(--primary);
             transform: scale(1.2);
         }
-        .juego-timeline .dot.done {
-            background: #4CAF50;
-        }
+        .juego-timeline .dot.done { background: #4CAF50; }
         .juego-progress {
             width: 100%;
             height: 4px;
@@ -854,24 +831,19 @@
             position: fixed;
             top: 50%;
             left: 50%;
-            transform: translate(-50%, -50%);
+            transform: translate(-50%,-50%);
             font-size: 3rem;
             z-index: 999;
             pointer-events: none;
             animation: flashPop 1.2s ease forwards;
         }
         @keyframes flashPop {
-            0% { opacity: 0; transform: translate(-50%, -50%) scale(0.5); }
-            30% { opacity: 1; transform: translate(-50%, -50%) scale(1.3); }
-            100% { opacity: 0; transform: translate(-50%, -70%) scale(1); }
+            0% { opacity:0; transform: translate(-50%,-50%) scale(0.5); }
+            30% { opacity:1; transform: translate(-50%,-50%) scale(1.3); }
+            100% { opacity:0; transform: translate(-50%,-70%) scale(1); }
         }
-        .juego-final {
-            text-align: center;
-            padding: 20px;
-        }
-        .juego-final .big {
-            font-size: 4rem;
-        }
+        .juego-final { text-align: center; padding: 20px; }
+        .juego-final .big { font-size: 4rem; }
         .juego-final .title {
             font-size: 1.8rem;
             font-weight: 900;
@@ -888,7 +860,7 @@
             font-weight: 700;
         }
 
-        /* ===== MEMORY MEJORADO (CON FRONT Y BACK CORREGIDO) ===== */
+        /* ===== MEMORY MEJORADO (FRONT / BACK) ===== */
         .memory-grid {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
@@ -896,7 +868,6 @@
             max-width: 700px;
             margin: 20px auto;
         }
-
         .memory-card {
             perspective: 1000px;
             aspect-ratio: 1;
@@ -904,7 +875,6 @@
             border: none;
             box-shadow: none;
         }
-
         .memory-card-inner {
             position: relative;
             width: 100%;
@@ -912,15 +882,12 @@
             transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
             transform-style: preserve-3d;
             border-radius: 14px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 0 10px rgba(0,0,0,0.2);
         }
-
         .memory-card.flipped .memory-card-inner {
             transform: rotateY(180deg);
         }
-
-        .memory-card-front,
-        .memory-card-back {
+        .memory-card-front, .memory-card-back {
             position: absolute;
             width: 100%;
             height: 100%;
@@ -929,42 +896,31 @@
             align-items: center;
             justify-content: center;
             border-radius: 14px;
-            border: 2px solid rgba(255, 255, 255, 0.1);
+            border: 2px solid rgba(255,255,255,0.1);
             background: var(--glass);
             font-weight: 600;
             padding: 8px;
             text-align: center;
         }
-
         .memory-card-front {
             background: var(--glass);
             color: var(--text-light);
             font-size: 2.8rem;
         }
-
         .memory-card-back {
             background: #fff;
             color: #222;
             transform: rotateY(180deg);
             font-size: 2.8rem;
         }
-
-        .memory-card-back.word {
-            font-size: 1.4rem;
-        }
-
+        .memory-card-back.word { font-size: 1.4rem; }
         .memory-card:hover .memory-card-inner {
             box-shadow: 0 0 25px rgba(193, 18, 31, 0.4);
         }
-
         .memory-card.matched .memory-card-inner {
             transform: rotateY(0deg);
         }
-
-        .memory-card.matched .memory-card-front {
-            display: none;
-        }
-
+        .memory-card.matched .memory-card-front { display: none; }
         .memory-card.matched .memory-card-back {
             background: #4CAF50;
             color: #fff;
@@ -972,13 +928,9 @@
             opacity: 0.8;
             pointer-events: none;
             border-color: #4CAF50;
-            box-shadow: 0 0 20px rgba(76, 175, 80, 0.3);
+            box-shadow: 0 0 20px rgba(76,175,80,0.3);
         }
-
-        .memory-card.matched {
-            pointer-events: none;
-        }
-
+        .memory-card.matched { pointer-events: none; }
         .memory-stats {
             display: flex;
             gap: 20px;
@@ -1005,17 +957,15 @@
         }
         .quiz-opts button {
             padding: 14px;
-            border: 1px solid rgba(255, 255, 255, 0.06);
+            border: 1px solid rgba(255,255,255,0.06);
             border-radius: 16px;
-            background: rgba(255, 255, 255, 0.02);
+            background: rgba(255,255,255,0.02);
             color: #fff;
             font-size: 0.95rem;
             cursor: pointer;
             transition: 0.3s;
         }
-        .quiz-opts button:hover {
-            background: rgba(193, 18, 31, 0.15);
-        }
+        .quiz-opts button:hover { background: rgba(193,18,31,0.15); }
         .quiz-opts button.correct {
             background: #1B5E20;
             border-color: #4CAF50;
@@ -1036,7 +986,7 @@
         .quiz-progress {
             width: 100%;
             height: 4px;
-            background: rgba(255, 255, 255, 0.05);
+            background: rgba(255,255,255,0.05);
             border-radius: 10px;
             margin-top: 18px;
             overflow: hidden;
@@ -1049,28 +999,25 @@
             transition: width 0.6s ease;
         }
 
-        /* ===== ASISTENTE IA (VIDA) ===== */
+        /* ===== ASISTENTE IA ===== */
         .holo {
             width: 140px;
             height: 140px;
             border-radius: 50%;
-            background: radial-gradient(circle at 30% 30%, rgba(0, 229, 255, 0.1), transparent 70%);
-            border: 2px solid rgba(0, 229, 255, 0.2);
+            background: radial-gradient(circle at 30% 30%, rgba(0,229,255,0.1), transparent 70%);
+            border: 2px solid rgba(0,229,255,0.2);
             display: flex;
             align-items: center;
             justify-content: center;
             font-size: 3.5rem;
             animation: float 3s ease-in-out infinite;
         }
-        @keyframes float {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-12px); }
-        }
+        @keyframes float { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-12px); } }
         .chat-box .msgs {
             height: 200px;
             overflow-y: auto;
             padding: 10px;
-            background: rgba(0, 0, 0, 0.2);
+            background: rgba(0,0,0,0.2);
             border-radius: 16px;
             margin-bottom: 12px;
             font-size: 0.9rem;
@@ -1095,15 +1042,13 @@
             flex: 1;
             padding: 12px 16px;
             border-radius: 40px;
-            border: 1px solid rgba(255, 255, 255, 0.06);
-            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255,255,255,0.06);
+            background: rgba(255,255,255,0.02);
             color: #fff;
             font-size: 0.9rem;
             outline: none;
         }
-        .chat-input input:focus {
-            border-color: #00E5FF;
-        }
+        .chat-input input:focus { border-color: #00E5FF; }
         .chat-input button {
             padding: 12px 24px;
             border: none;
@@ -1116,8 +1061,8 @@
 
         /* ===== FINAL ===== */
         #final .cert {
-            background: rgba(255, 255, 255, 0.02);
-            border: 2px solid rgba(193, 18, 31, 0.2);
+            background: rgba(255,255,255,0.02);
+            border: 2px solid rgba(193,18,31,0.2);
             border-radius: var(--radius);
             padding: 35px 40px;
             max-width: 560px;
@@ -1142,6 +1087,7 @@
             margin-top: 12px;
         }
 
+        /* ===== RESPONSIVE ===== */
         @media (max-width: 768px) {
             #intro h1 { font-size: 2.2rem; }
             .menu a { font-size: 0.65rem; padding: 4px 10px; }
@@ -1174,7 +1120,6 @@
     </style>
 </head>
 <body>
-
     <canvas id="stars-canvas"></canvas>
 
     <!-- ===== LOADER ===== -->
@@ -1238,7 +1183,7 @@
     <!-- ===== JUEGO ===== -->
     <section id="juego" class="section">
         <h2 style="color:#ffcc00;">🎮 Coordinador de Trasplantes</h2>
-        <p style="color:var(--text-muted); margin-bottom:10px;">Toma decisiones críticas que afectan vidas. Lidera el equipo del hospital.</p>
+        <p style="color:var(--text-muted); margin-bottom:10px;">Toma decisiones críticas que afectan vidas.</p>
         <div class="juego-box" id="juego-box">
             <div class="juego-header">
                 <span class="fase" id="juego-fase">Fase 1/5</span>
@@ -1274,24 +1219,20 @@
         </div>
     </section>
 
-    <!-- ===== MEMORY MEJORADO (CON CORRECCIÓN DE TEXTO VOLTEADO) ===== -->
+    <!-- ===== MEMORY ===== -->
     <section id="memory" class="section">
         <h2 style="color:#66ccff;">🧩 Memory · Ponte a Prueba</h2>
         <p style="color:var(--text-muted); margin-bottom:6px;">
             💪 Demuestra tu agilidad mental mientras aprendes sobre donación.<br />
             ¡Encuentra las 8 parejas (emoji ↔ palabra) en el menor tiempo posible!
         </p>
-
         <div class="memory-grid" id="memory-grid"></div>
-
         <div class="memory-stats">
             <span id="memory-parejas">👥 Parejas: 0/8</span>
             <span id="memory-intentos">🔍 Intentos: 0</span>
             <span id="memory-tiempo">⏱️ Tiempo: 0s</span>
         </div>
-
         <div id="memory-final" style="margin-top:20px; font-weight:bold; color:#4CAF50;"></div>
-
         <button class="btn-primary" onclick="iniciarMemory()" style="padding:10px 28px; font-size:0.95rem; margin-top:15px; background:#1D3557;">
             🔄 Reiniciar Juego
         </button>
@@ -1313,7 +1254,7 @@
     <!-- ===== DASHBOARD ===== -->
     <section id="dashboard" class="section">
         <h2 style="color:#00E5FF;">📊 Panel de Control</h2>
-        <p style="color:var(--text-muted); margin-bottom:6px;">Estadísticas en tiempo real del sistema de donación</p>
+        <p style="color:var(--text-muted); margin-bottom:6px;">Estadísticas en tiempo real</p>
         <div class="dash-grid">
             <div class="dash-card"><span class="icon">❤️</span><div class="num" id="dash-don">1,284</div><div class="lbl">Donantes registrados</div></div>
             <div class="dash-card"><span class="icon">🩺</span><div class="num" id="dash-tra">846</div><div class="lbl">Trasplantes realizados</div></div>
@@ -1326,7 +1267,7 @@
         </div>
     </section>
 
-    <!-- ===== INFO MEJORADA ===== -->
+    <!-- ===== INFO ===== -->
     <section id="info" class="section">
         <div class="info-hero">
             <h2>📋 <span>Información</span> y Educación</h2>
@@ -1337,10 +1278,9 @@
                 <div class="item"><span class="num">100%</span> gratuito</div>
             </div>
         </div>
-
         <div class="info-grid">
             <div class="info-card"><span class="icono">❤️</span><div class="titulo">8 vidas</div><div class="desc">Un donante puede salvar hasta <strong>8 vidas</strong> con la donación de riñones, hígado, corazón, páncreas, pulmones e intestinos.</div></div>
-            <div class="info-card"><span class="icono">⏳</span><div class="titulo">+5,000 en espera</div><div class="desc">En Perú, más de <strong>5,000 personas</strong> esperan un trasplante. Tu decisión es clave.</div></div>
+            <div class="info-card"><span class="icono">⏳</span><div class="titulo">+5,000 en espera</div><div class="desc">En Perú, más de <strong>5,000 personas</strong> esperan un trasplante.</div></div>
             <div class="info-card"><span class="icono">🫘</span><div class="titulo">Riñón</div><div class="desc">Es el órgano más trasplantado. Se puede donar en vida y vivir con absoluta normalidad.</div></div>
             <div class="info-card"><span class="icono">🏛️</span><div class="titulo">PROCURA</div><div class="desc">Entidad pública peruana que coordina la donación y el trasplante de órganos.</div></div>
             <div class="info-card"><span class="icono">💚</span><div class="titulo">Sin dolor</div><div class="desc">La extracción de órganos se realiza bajo <strong>anestesia general</strong>. No sientes nada.</div></div>
@@ -1348,13 +1288,11 @@
             <div class="info-card"><span class="icono">👶👴</span><div class="titulo">Sin límite de edad</div><div class="desc">No hay edad mínima ni máxima para donar. Lo que importa es la salud de los órganos.</div></div>
             <div class="info-card"><span class="icono">💰</span><div class="titulo">Gratuito</div><div class="desc">La donación es <strong>100% gratuita</strong> para la familia. Es un acto altruista.</div></div>
         </div>
-
         <div class="info-mitos">
             <div class="mito-item"><div class="mito">❌ Mito: "Donar duele mucho"</div><div class="realidad">✅ Realidad: Se realiza con anestesia general. No sientes nada.</div></div>
             <div class="mito-item"><div class="mito">❌ Mito: "Mi religión no lo permite"</div><div class="realidad">✅ Realidad: Todas las religiones lo ven como un acto de amor.</div></div>
             <div class="mito-item"><div class="mito">❌ Mito: "Si dono, no me atenderán bien"</div><div class="realidad">✅ Realidad: Tu salud es siempre la prioridad.</div></div>
         </div>
-
         <div class="info-pasos">
             <h3>📝 ¿Cómo registrarte como donante?</h3>
             <ol>
@@ -1363,17 +1301,15 @@
                 <li><strong>3. Firma el consentimiento:</strong> Completa el formulario de inscripción en PROCURA.</li>
             </ol>
         </div>
-
         <div class="info-cta">
             <button class="btn-grande" onclick="window.open('https://www.gob.pe/procura', '_blank')">🫀 Regístrate como donante</button>
         </div>
     </section>
 
-    <!-- ===== VIDEOS (GALERÍA VIMEO) ===== -->
+    <!-- ===== VIDEOS ===== -->
     <section id="videos" class="section">
         <h2>🎬 Galería de Videos · Vimeo</h2>
         <p class="sub-text">Recursos educativos y testimonios sobre donación de órganos.</p>
-
         <div class="vimeo-grid">
             <iframe src="https://player.vimeo.com/video/1204599524" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
             <iframe src="https://player.vimeo.com/video/1204599834" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
@@ -1384,7 +1320,7 @@
         </div>
     </section>
 
-    <!-- ===== ASISTENTE IA (VIDA) ===== -->
+    <!-- ===== ASISTENTE IA ===== -->
     <section id="asistente" class="section">
         <div class="holo">👩🏻</div>
         <div class="chat-box">
@@ -1421,14 +1357,12 @@
             const stars = [];
             const NUM_STARS = 250;
             const COLORS = ['#C1121F', '#00E5FF', '#F8F9FA', '#ffcc00', '#66ccff'];
-
             function resize() {
                 w = canvas.width = window.innerWidth;
                 h = canvas.height = window.innerHeight;
             }
             window.addEventListener('resize', resize);
             resize();
-
             for (let i = 0; i < NUM_STARS; i++) {
                 stars.push({
                     x: Math.random() * w,
@@ -1440,7 +1374,6 @@
                     alpha: 0.3 + Math.random() * 0.7
                 });
             }
-
             function draw() {
                 ctx.clearRect(0, 0, w, h);
                 stars.forEach(s => {
@@ -1487,17 +1420,15 @@
         })();
 
         // ================================================================
-        // ===== MÚSICA (opcional) =====
+        // ===== MÚSICA =====
         // ================================================================
         let musicaCtx = null;
         let musicaInterval = null;
-
         function iniciarMusica() {
             try {
                 musicaCtx = new(window.AudioContext || window.webkitAudioContext)();
                 const notes = [523, 587, 659, 523, 659, 587, 523, 659, 784, 880, 784, 659];
                 let index = 0;
-
                 function tocarNota() {
                     if (!musicaCtx) return;
                     const osc = musicaCtx.createOscillator();
@@ -1516,7 +1447,6 @@
                 musicaInterval = setInterval(tocarNota, 500);
             } catch (e) { console.log('🎵 Música no disponible'); }
         }
-
         window.addEventListener('beforeunload', () => {
             if (musicaInterval) clearInterval(musicaInterval);
             if (musicaCtx) musicaCtx.close();
@@ -1613,58 +1543,58 @@
                 if (lower.includes(key)) return val;
             }
             const palabras = lower.split(/\s+/);
-            if (palabras.some(w => ['quién', 'quienes', 'quien'].includes(w)) && palabras.some(w => ['donar', 'donante', 'donación'].includes(w))) {
+            if (palabras.some(w => ['quién','quienes','quien'].includes(w)) && palabras.some(w => ['donar','donante','donación'].includes(w))) {
                 return 'Cualquier persona puede ser donante, sin importar la edad. Lo importante es que los órganos estén en buen estado. Niños, jóvenes y adultos mayores pueden donar. La decisión es tuya. 💪';
             }
-            if (palabras.some(w => ['requisito', 'requisitos', 'necesito', 'necesita'].includes(w))) {
+            if (palabras.some(w => ['requisito','requisitos','necesito','necesita'].includes(w))) {
                 return 'Los requisitos son simples: tener la voluntad de donar, que tus órganos estén sanos, y que tu familia conozca tu decisión. No hay restricciones de edad ni de condiciones médicas previas que te impidan ser donante. 😊';
             }
-            if (palabras.some(w => ['edad', 'años', 'mayor', 'menor'].includes(w))) {
+            if (palabras.some(w => ['edad','años','mayor','menor'].includes(w))) {
                 return 'No hay edad límite para donar. Lo que importa es la salud de tus órganos en el momento de la donación. Personas de todas las edades pueden salvar vidas. 🌟';
             }
-            if (palabras.some(w => ['familia', 'padres', 'hijos', 'esposo', 'esposa'].includes(w))) {
+            if (palabras.some(w => ['familia','padres','hijos','esposo','esposa'].includes(w))) {
                 return 'La familia es importante porque, aunque tu voluntad prevalece, los médicos suelen consultar a la familia para confirmar. Por eso, habla con ellos y diles tu deseo de donar. 💬';
             }
-            if (palabras.some(w => ['costo', 'precio', 'pagar', 'gratis', 'gratuito'].includes(w))) {
+            if (palabras.some(w => ['costo','precio','pagar','gratis','gratuito'].includes(w))) {
                 return 'La donación de órganos es completamente gratuita para la familia del donante. Todos los gastos médicos y quirúrgicos son cubiertos por el sistema de salud. No tienes que pagar nada. 💰❌';
             }
-            if (palabras.some(w => ['muerte', 'cerebral', 'encefálica', 'encefalica'].includes(w))) {
+            if (palabras.some(w => ['muerte','cerebral','encefálica','encefalica'].includes(w))) {
                 return 'La muerte cerebral es la pérdida irreversible de todas las funciones del cerebro. Es el requisito médico para poder donar órganos. Se diagnostica con pruebas rigurosas y protocolos establecidos. 🧠';
             }
-            if (palabras.some(w => ['mito', 'mitos', 'falso', 'verdad', 'mentira'].includes(w))) {
+            if (palabras.some(w => ['mito','mitos','falso','verdad','mentira'].includes(w))) {
                 return 'Los mitos más comunes son: "donar duele", "mi religión no lo permite", "es caro", "soy muy joven o muy mayor", "si dono no me atenderán bien". ¡Todos son falsos! La donación es indolora (por anestesia), gratuita, apoyada por todas las religiones, sin límite de edad, y los equipos médicos son independientes. 🚫';
             }
-            if (palabras.some(w => ['religión', 'religioso', 'iglesia', 'católica', 'catolica', 'evangélica', 'evangelica', 'judía', 'judia', 'islámica', 'islamica', 'budista'].includes(w))) {
+            if (palabras.some(w => ['religión','religioso','iglesia','católica','catolica','evangélica','evangelica','judía','judia','islámica','islamica','budista'].includes(w))) {
                 return 'Todas las religiones principales (católica, evangélica, judía, islámica, budista, hinduista) apoyan la donación como un acto de amor y solidaridad. Es una manera de dar vida después de la muerte. 🙏';
             }
-            if (palabras.some(w => ['procura', 'organización', 'entidad'].includes(w))) {
+            if (palabras.some(w => ['procura','organización','entidad'].includes(w))) {
                 return 'PROCURA es el Programa Nacional de Donación y Trasplante de Órganos y Tejidos del Perú. Es la entidad que coordina y supervisa todo el proceso con transparencia y equidad. 🇵🇪';
             }
-            if (palabras.some(w => ['órgano', 'organo', 'órganos', 'organos'].includes(w)) && palabras.some(w => ['qué', 'que', 'cuáles', 'cuales'].includes(w))) {
+            if (palabras.some(w => ['órgano','organo','órganos','organos'].includes(w)) && palabras.some(w => ['qué','que','cuáles','cuales'].includes(w))) {
                 return 'Los órganos que se pueden donar son: riñones, hígado, corazón, pulmones, páncreas, intestinos, y tejidos como córneas, piel, huesos, tendones, válvulas cardíacas y médula ósea. Cada uno puede salvar vidas. ❤️';
             }
-            if (palabras.some(w => ['dolor', 'duele'].includes(w))) {
+            if (palabras.some(w => ['dolor','duele'].includes(w))) {
                 return 'La extracción de órganos se realiza bajo anestesia general, por lo que no sientes absolutamente ningún dolor. Es un procedimiento controlado y seguro. 😌';
             }
-            if (palabras.some(w => ['cáncer', 'cancer', 'tumor'].includes(w))) {
+            if (palabras.some(w => ['cáncer','cancer','tumor'].includes(w))) {
                 return 'Las personas con cáncer activo no pueden donar órganos por el riesgo de transmisión de células cancerosas. Sin embargo, aquellos que han superado el cáncer y están en remisión pueden ser evaluados. 🩺';
             }
-            if (palabras.some(w => ['covid', 'coronavirus'].includes(w))) {
+            if (palabras.some(w => ['covid','coronavirus'].includes(w))) {
                 return 'Haber tenido COVID-19 no impide ser donante, siempre que los órganos estén sanos y no haya contraindicaciones. Cada caso se evalúa individualmente. 🦠';
             }
-            if (palabras.some(w => ['sida', 'vih'].includes(w))) {
+            if (palabras.some(w => ['sida','vih'].includes(w))) {
                 return 'Las personas con VIH/SIDA pueden donar órganos en ciertos casos, especialmente si el virus está controlado y no hay daño orgánico. Existen protocolos específicos para estos casos. 🫂';
             }
-            if (palabras.some(w => ['lista', 'espera', 'esperando'].includes(w))) {
+            if (palabras.some(w => ['lista','espera','esperando'].includes(w))) {
                 return 'En Perú, más de 5,000 personas esperan un trasplante. Cada año, muchos fallecen porque no llega un donante a tiempo. Tu decisión puede salvar vidas. ⏳';
             }
-            if (palabras.some(w => ['perú', 'peru'].includes(w))) {
+            if (palabras.some(w => ['perú','peru'].includes(w))) {
                 return 'En Perú, la tasa de donación es baja. Necesitamos más personas que se informen y tomen la decisión de donar. El sistema de donación está regulado por PROCURA. 🌎';
             }
-            if (palabras.some(w => ['tatuaje', 'tatuajes', 'piercing', 'piercings'].includes(w))) {
+            if (palabras.some(w => ['tatuaje','tatuajes','piercing','piercings'].includes(w))) {
                 return 'Sí, las personas con tatuajes o piercings pueden donar órganos. No hay restricciones por tatuajes o piercings, siempre que los órganos estén sanos. Lo importante es la salud general. 🎨';
             }
-            if (palabras.some(w => ['dni', 'documento', 'identidad'].includes(w))) {
+            if (palabras.some(w => ['dni','documento','identidad'].includes(w))) {
                 return 'Marcar "Sí" en tu DNI significa que has manifestado tu voluntad de donar órganos. Es una forma de dejar constancia de tu decisión. Si cambias de opinión, puedes solicitar el cambio en Reniec o en un centro de salud. 📄';
             }
             return '👩🏻😊 Hola, gracias por tu consulta. No estoy segura de haber entendido completamente tu pregunta. Puedo ayudarte con temas como donación de órganos, requisitos, enfermedades, edad, tatuajes, DNI, familia, mitos, religión, proceso de donación, transporte de órganos, instituciones responsables y cómo registrarte como donante. ¿Te gustaría que te cuente sobre alguno en particular? 💚';
@@ -1685,7 +1615,6 @@
             }, 400);
             msgs.scrollTop = msgs.scrollHeight;
         }
-
         document.getElementById('chat-input').addEventListener('keypress', (e) => {
             if (e.key === 'Enter') sendChat();
         });
@@ -1700,7 +1629,6 @@
             { id: 'higado', icono: '🟤', nombre: 'Hígado' },
             { id: 'pulmon', icono: '🫁', nombre: 'Pulmón' }
         ];
-
         const casosSimulador = [
             { nombre: 'Valentina', edad: 17, historia: 'Estudiante de danza. Desde hace 2 meses presenta fatiga extrema, palidez y dificultad para concentrarse. Sus análisis muestran anemia severa y creatinina elevada.', sintomas: 'Fatiga, palidez, creatinina elevada, anemia.', organo: 'riñon', pista: 'Pista: el filtro del cuerpo está fallando.' },
             { nombre: 'Mateo', edad: 19, historia: 'Joven deportista. Tras un partido de fútbol sufrió un colapso. El ecocardiograma revela miocardiopatía dilatada con fracción de eyección del 25%.', sintomas: 'Colapso, disnea, edema en piernas, fracción de eyección baja.', organo: 'corazon', pista: 'Pista: el motor principal está dañado.' },
@@ -1713,7 +1641,6 @@
             { nombre: 'Valeria', edad: 40, historia: 'Profesora de yoga. Insuficiencia renal crónica estadio 5, con uremia y anemia refractaria.', sintomas: 'Uremia, anemia, creatinina > 8 mg/dL.', organo: 'riñon', pista: 'Pista: los riñones ya no eliminan desechos.' },
             { nombre: 'Gabriel', edad: 50, historia: 'Empresario. Cardiopatía isquémica con múltiples infartos. El corazón está severamente dañado y no responde a fármacos.', sintomas: 'Cardiopatía isquémica, infartos recurrentes, falla cardíaca.', organo: 'corazon', pista: 'Pista: el corazón necesita un nuevo comienzo.' }
         ];
-
         let simActual = 0, simVidas = 0, simPuntos = 0, simDiagnosticos = 0, simBloqueado = false, pistaUsada = false;
 
         function iniciarSimulador() {
@@ -1739,7 +1666,6 @@
                 setTimeout(() => navigate('final'), 1500);
                 return;
             }
-
             const caso = casosSimulador[simActual];
             document.getElementById('sim-nombre').textContent = `👤 ${caso.nombre}`;
             document.getElementById('sim-edad').textContent = `Edad: ${caso.edad} años`;
@@ -1751,7 +1677,6 @@
             document.getElementById('sim-diagnosticos').textContent = `✅ Diagnósticos: ${simDiagnosticos}/10`;
             document.getElementById('btn-pista').style.display = 'inline-block';
             pistaUsada = false;
-
             const container = document.getElementById('sim-organos');
             container.innerHTML = '';
             organosSim.forEach(org => {
@@ -1762,7 +1687,6 @@
                 div.addEventListener('click', () => evaluarEleccion(org.id, div));
                 container.appendChild(div);
             });
-
             document.getElementById('sim-feedback').textContent = '🔍 ¿Cuál es el diagnóstico? Elige un órgano.';
             document.getElementById('sim-feedback').style.color = '#ADB5BD';
             simBloqueado = false;
@@ -1804,7 +1728,7 @@
         }
 
         function crearConfeti(cantidad) {
-            const emojis = ['🎉', '✨', '💚', '🌟', '❤️', '🫀'];
+            const emojis = ['🎉','✨','💚','🌟','❤️','🫀'];
             for (let i = 0; i < cantidad; i++) {
                 const el = document.createElement('div');
                 el.textContent = emojis[Math.floor(Math.random() * emojis.length)];
@@ -1853,7 +1777,7 @@
                     type: 'doughnut',
                     data: {
                         labels: ['Trasplantes', 'En espera', 'Donantes'],
-                        datasets: [{ data: [newT, newE, newD], backgroundColor: ['#C1121F', '#1D3557', '#2A6A4A'], borderColor: '#0B0E1A', borderWidth: 3 }]
+                        datasets: [{ data: [newT, newE, newD], backgroundColor: ['#C1121F','#1D3557','#2A6A4A'], borderColor: '#0B0E1A', borderWidth: 3 }]
                     },
                     options: { responsive: true, plugins: { legend: { labels: { color: '#F8F9FA', font: { size: 10 } } } }, cutout: '65%' }
                 });
@@ -1864,8 +1788,8 @@
                 chartSangre = new Chart(ctx2, {
                     type: 'bar',
                     data: {
-                        labels: ['O+', 'A+', 'B+', 'AB+', 'O-', 'A-', 'B-', 'AB-'],
-                        datasets: [{ label: 'Donaciones', data: [320, 280, 180, 90, 150, 120, 70, 40], backgroundColor: ['#C1121F', '#E63946', '#D62828', '#F4A261', '#1D3557', '#2A4A6A', '#3A5A7A', '#4A6A8A'], borderRadius: 4 }]
+                        labels: ['O+','A+','B+','AB+','O-','A-','B-','AB-'],
+                        datasets: [{ label: 'Donaciones', data: [320,280,180,90,150,120,70,40], backgroundColor: ['#C1121F','#E63946','#D62828','#F4A261','#1D3557','#2A4A6A','#3A5A7A','#4A6A8A'], borderRadius: 4 }]
                     },
                     options: { responsive: true, plugins: { legend: { display: false } }, scales: { y: { beginAtZero: true, ticks: { color: '#ADB5BD' } }, x: { ticks: { color: '#ADB5BD', font: { size: 9 } } } } }
                 });
@@ -1876,8 +1800,8 @@
                 chartOrganos = new Chart(ctx3, {
                     type: 'bar',
                     data: {
-                        labels: ['Riñón', 'Hígado', 'Corazón', 'Pulmón', 'Páncreas'],
-                        datasets: [{ label: 'Trasplantes', data: [420, 180, 120, 80, 46], backgroundColor: ['#2A6A4A', '#40916C', '#52B788', '#74C69D', '#95D5B2'], borderRadius: 4 }]
+                        labels: ['Riñón','Hígado','Corazón','Pulmón','Páncreas'],
+                        datasets: [{ label: 'Trasplantes', data: [420,180,120,80,46], backgroundColor: ['#2A6A4A','#40916C','#52B788','#74C69D','#95D5B2'], borderRadius: 4 }]
                     },
                     options: { responsive: true, plugins: { legend: { display: false } }, scales: { y: { beginAtZero: true, ticks: { color: '#ADB5BD' } }, x: { ticks: { color: '#ADB5BD', font: { size: 9 } } } } }
                 });
@@ -1902,10 +1826,8 @@
         window.updateDashboard = updateDashboard;
 
         // ================================================================
-        // ===== MEMORY MEJORADO (CON FRONT Y BACK) =====
+        // ===== MEMORY MEJORADO =====
         // ================================================================
-
-        // 👇 PAREJAS ACTUALIZADAS (SIN CONFUSIÓN DE CORAZONES)
         const memoryPairs = [
             { emoji: '🫀', word: 'Corazón' },
             { emoji: '🫶', word: 'Donar' },
@@ -1916,34 +1838,21 @@
             { emoji: '👨‍⚕️', word: 'Médico' },
             { emoji: '🌱', word: 'Vida' }
         ];
-
-        let memoryCards = [];
-        let flippedIndices = [];
-        let matchedPairs = 0;
-        let attempts = 0;
-        let memoryTimer = 0;
-        let memoryInterval = null;
+        let memoryCards = [], flippedIndices = [], matchedPairs = 0, attempts = 0, memoryTimer = 0, memoryInterval = null;
 
         function iniciarMemory() {
-            matchedPairs = 0;
-            attempts = 0;
-            memoryTimer = 0;
-            flippedIndices = [];
+            matchedPairs = 0; attempts = 0; memoryTimer = 0; flippedIndices = [];
             clearInterval(memoryInterval);
-
             document.getElementById('memory-parejas').textContent = '👥 Parejas: 0/8';
             document.getElementById('memory-intentos').textContent = '🔍 Intentos: 0';
             document.getElementById('memory-tiempo').textContent = '⏱️ Tiempo: 0s';
             document.getElementById('memory-final').textContent = '';
-
             const pairs = memoryPairs.flatMap((p, idx) => [
                 { id: idx, value: p.emoji, type: 'emoji', pairId: idx, matched: false },
                 { id: idx, value: p.word, type: 'word', pairId: idx, matched: false }
             ]);
             memoryCards = pairs.sort(() => Math.random() - 0.5);
-
             renderMemory();
-
             memoryInterval = setInterval(() => {
                 memoryTimer++;
                 document.getElementById('memory-tiempo').textContent = `⏱️ Tiempo: ${memoryTimer}s`;
@@ -1958,19 +1867,15 @@
                 div.className = 'memory-card';
                 if (card.matched) div.classList.add('matched');
                 div.dataset.index = index;
-
                 const inner = document.createElement('div');
                 inner.className = 'memory-card-inner';
-
                 const front = document.createElement('div');
                 front.className = 'memory-card-front';
                 front.textContent = '❓';
-
                 const back = document.createElement('div');
                 back.className = 'memory-card-back';
                 if (card.type === 'word') back.classList.add('word');
                 back.textContent = card.value;
-
                 inner.appendChild(front);
                 inner.appendChild(back);
                 div.appendChild(inner);
@@ -1984,19 +1889,15 @@
             if (card.matched) return;
             if (flippedIndices.length >= 2) return;
             if (flippedIndices.includes(index)) return;
-
             flippedIndices.push(index);
             const el = document.querySelector(`.memory-card[data-index="${index}"]`);
             el.classList.add('flipped');
-
             if (flippedIndices.length === 2) {
                 attempts++;
                 document.getElementById('memory-intentos').textContent = `🔍 Intentos: ${attempts}`;
-
                 const [idx1, idx2] = flippedIndices;
                 const card1 = memoryCards[idx1];
                 const card2 = memoryCards[idx2];
-
                 if (card1.pairId === card2.pairId && card1.type !== card2.type) {
                     card1.matched = true;
                     card2.matched = true;
@@ -2004,7 +1905,6 @@
                     document.getElementById('memory-parejas').textContent = `👥 Parejas: ${matchedPairs}/8`;
                     flippedIndices = [];
                     renderMemory();
-
                     if (matchedPairs === 8) {
                         clearInterval(memoryInterval);
                         document.getElementById('memory-final').innerHTML =
@@ -2029,16 +1929,16 @@
         // ===== QUIZ =====
         // ================================================================
         const preguntas = [
-            { q: '¿Cuántas vidas puede salvar un donante?', opts: ['1', '4', '8', '10'], ans: 2 },
-            { q: '¿La donación de órganos duele?', opts: ['Sí', 'No, es con anestesia', 'Depende', 'Solo en algunos casos'], ans: 1 },
-            { q: '¿Qué órgano se dona con más frecuencia?', opts: ['Corazón', 'Riñón', 'Hígado', 'Pulmón'], ans: 1 },
-            { q: '¿Quién coordina la donación en Perú?', opts: ['MINSA', 'PROCURA', 'ESSALUD', 'OPS'], ans: 1 },
-            { q: '¿La familia del donante paga algo?', opts: ['Sí', 'No, es gratuito', 'Depende', 'Solo en el extranjero'], ans: 1 },
-            { q: '¿Cuántos tipos de sangre existen?', opts: ['2', '4', '6', '8'], ans: 1 },
-            { q: '¿El corazón puede ser trasplantado?', opts: ['Sí', 'No', 'Solo en niños', 'Depende'], ans: 0 },
-            { q: '¿Qué es PROCURA?', opts: ['Entidad de donación', 'Hospital', 'Banco de sangre', 'ONG'], ans: 0 },
-            { q: '¿La donación de órganos es legal?', opts: ['Sí', 'No', 'Solo en algunos países', 'Depende'], ans: 0 },
-            { q: '¿Qué órgano es el más solicitado?', opts: ['Riñón', 'Hígado', 'Corazón', 'Pulmón'], ans: 0 }
+            { q: '¿Cuántas vidas puede salvar un donante?', opts: ['1','4','8','10'], ans: 2 },
+            { q: '¿La donación de órganos duele?', opts: ['Sí','No, es con anestesia','Depende','Solo en algunos casos'], ans: 1 },
+            { q: '¿Qué órgano se dona con más frecuencia?', opts: ['Corazón','Riñón','Hígado','Pulmón'], ans: 1 },
+            { q: '¿Quién coordina la donación en Perú?', opts: ['MINSA','PROCURA','ESSALUD','OPS'], ans: 1 },
+            { q: '¿La familia del donante paga algo?', opts: ['Sí','No, es gratuito','Depende','Solo en el extranjero'], ans: 1 },
+            { q: '¿Cuántos tipos de sangre existen?', opts: ['2','4','6','8'], ans: 1 },
+            { q: '¿El corazón puede ser trasplantado?', opts: ['Sí','No','Solo en niños','Depende'], ans: 0 },
+            { q: '¿Qué es PROCURA?', opts: ['Entidad de donación','Hospital','Banco de sangre','ONG'], ans: 0 },
+            { q: '¿La donación de órganos es legal?', opts: ['Sí','No','Solo en algunos países','Depende'], ans: 0 },
+            { q: '¿Qué órgano es el más solicitado?', opts: ['Riñón','Hígado','Corazón','Pulmón'], ans: 0 }
         ];
         let quizIndex = 0, quizScore = 0, quizList = [], timerIntervalQ = null;
 
@@ -2108,105 +2008,181 @@
         window.iniciarQuiz = iniciarQuiz;
 
         // ================================================================
-        // ===== JUEGO COMPLETO (10 escenarios) =====
+        // ===== JUEGO COMPLETO =====
         // ================================================================
         const escenariosJuego = [
-            {
-                id: 1,
-                personaje: '👩‍⚕️ Dra. Elena',
-                rol: 'Jefa de Coordinación',
-                dialogo: 'Tenemos un paciente de 45 años con insuficiencia cardíaca avanzada. Su corazón está al 15% de capacidad. Solo tenemos un corazón disponible y otro paciente de 60 años con una condición similar. ¿A quién priorizas?',
-                opciones: [
-                    { texto: '💪 Paciente de 45 años (más joven, más años de vida)', icono: '💪', efecto: 'Salud +5, Reputación +10', stats: { salud: 5, reputacion: 10, estres: 0, camas: 0, organos: -1, lista: -1 } },
-                    { texto: '👴 Paciente de 60 años (mayor urgencia, peor estado)', icono: '👴', efecto: 'Salud -3, Reputación -5, Estrés +5', stats: { salud: -3, reputacion: -5, estres: 5, camas: 0, organos: -1, lista: -1 } },
-                    { texto: '⏳ Esperar más pruebas (riesgo de perder ambos)', icono: '⏳', efecto: 'Salud -10, Tiempo -3, Estrés +10', stats: { salud: -10, tiempo: -3, reputacion: -5, estres: 10, camas: 0, organos: 0, lista: 0 } }
-                ]
-            },
-            {
-                id: 2,
-                personaje: '👩‍⚕️ Nurse Carla',
-                rol: 'Coordinadora de Enfermería',
-                dialogo: 'Tenemos un órgano disponible para trasplante de riñón. Pero hay 3 pacientes compatibles: una adolescente de 16 años, un adulto de 40 años y un adulto mayor de 65 años. ¿Cómo decides?',
-                opciones: [
-                    { texto: '👧 Adolescente de 16 años (más años de vida por delante)', icono: '👧', efecto: 'Salud +8, Reputación +15', stats: { salud: 8, reputacion: 15, estres: 0, camas: -1, organos: -1, lista: -1 } },
-                    { texto: '👨 Adulto de 40 años (padre de familia, crítico)', icono: '👨', efecto: 'Salud +5, Reputación +5', stats: { salud: 5, reputacion: 5, estres: 0, camas: -1, organos: -1, lista: -1 } },
-                    { texto: '👴 Adulto mayor de 65 años (mayor riesgo, pero también merece oportunidad)', icono: '👴', efecto: 'Salud +2, Reputación +2, Estrés +3', stats: { salud: 2, reputacion: 2, estres: 3, camas: -1, organos: -1, lista: -1 } }
-                ]
-            },
-            {
-                id: 3,
-                personaje: '🧑‍💼 Sr. Gutiérrez',
-                rol: 'Administrador del Hospital',
-                dialogo: 'La lista de espera ha crecido un 20%. Tenemos camas limitadas. Un donante potencial acaba de fallecer, pero su familia duda en donar. ¿Cómo manejas la situación con la familia?',
-                opciones: [
-                    { texto: '🤝 Hablar con empatía y escuchar sus dudas', icono: '🤝', efecto: 'Reputación +15, Estrés -5', stats: { salud: 0, reputacion: 15, estres: -5, camas: 0, organos: 1, lista: -2 } },
-                    { texto: '📋 Presentarles datos fríos y estadísticas', icono: '📋', efecto: 'Reputación -5, Estrés +5', stats: { salud: 0, reputacion: -5, estres: 5, camas: 0, organos: 0, lista: 0 } },
-                    { texto: '⏳ Darles tiempo y volver mañana', icono: '⏳', efecto: 'Tiempo -5, Estrés +8, Reputación -3', stats: { salud: 0, tiempo: -5, reputacion: -3, estres: 8, camas: 0, organos: 0, lista: 0 } }
-                ]
-            },
-            {
-                id: 4,
-                personaje: '👩‍⚕️ Dra. Elena',
-                rol: 'Jefa de Coordinación',
-                dialogo: 'Un paciente con fibrosis pulmonar necesita un trasplante de pulmón urgente. Pero el único pulmón disponible tiene una ligera infección bacteriana controlable. ¿Aceptas el órgano o esperas otro?',
-                opciones: [
-                    { texto: '✅ Aceptar el órgano (riesgo asumible, salva vida ahora)', icono: '✅', efecto: 'Salud +10, Reputación +10, Estrés +5', stats: { salud: 10, reputacion: 10, estres: 5, camas: -1, organos: -1, lista: -1 } },
-                    { texto: '❌ Rechazar y esperar otro (más seguro, pero el paciente empeora)', icono: '❌', efecto: 'Salud -10, Tiempo -3, Estrés +10', stats: { salud: -10, tiempo: -3, reputacion: -5, estres: 10, camas: 0, organos: 0, lista: 0 } }
-                ]
-            },
-            {
-                id: 5,
-                personaje: '🧑‍💼 Sr. Gutiérrez',
-                rol: 'Administrador del Hospital',
-                dialogo: 'Tenemos un donante fallecido con múltiples órganos válidos. Pero el equipo quirúrgico está agotado por una jornada de 12 horas. ¿Realizas los trasplantes ahora o esperas al equipo de mañana?',
-                opciones: [
-                    { texto: '⚡ Operar ahora (riesgo de fatiga, pero salvas vidas)', icono: '⚡', efecto: 'Salud +15, Reputación +15, Estrés +15', stats: { salud: 15, reputacion: 15, estres: 15, camas: -2, organos: -2, lista: -3 } },
-                    { texto: '😴 Esperar al equipo de mañana (más seguro, pero órganos pueden deteriorarse)', icono: '😴', efecto: 'Salud -8, Tiempo -5, Reputación -5', stats: { salud: -8, tiempo: -5, reputacion: -5, estres: 0, camas: 0, organos: 0, lista: 0 } }
-                ]
-            },
-            {
-                id: 6,
-                personaje: '👩‍⚕️ Nurse Carla',
-                rol: 'Coordinadora de Enfermería',
-                dialogo: 'Un paciente con hepatocarcinoma (cáncer de hígado) en fase inicial necesita un trasplante de hígado. Pero hay un paciente con cirrosis avanzada que lleva más tiempo en lista. ¿A quién das prioridad?',
-                opciones: [
-                    { texto: '🩺 Paciente con cáncer (riesgo de metástasis, tiempo limitado)', icono: '🩺', efecto: 'Salud +5, Reputación +10', stats: { salud: 5, reputacion: 10, estres: 0, camas: -1, organos: -1, lista: -1 } },
-                    { texto: '🫂 Paciente con cirrosis (más tiempo en lista, riesgo de muerte inminente)', icono: '🫂', efecto: 'Salud +8, Reputación +5', stats: { salud: 8, reputacion: 5, estres: 0, camas: -1, organos: -1, lista: -1 } },
-                    { texto: '⚖️ Evaluar ambos casos con comité médico', icono: '⚖️', efecto: 'Tiempo -3, Reputación +5', stats: { salud: 0, tiempo: -3, reputacion: 5, estres: 0, camas: 0, organos: 0, lista: 0 } }
-                ]
-            },
-            {
-                id: 7,
-                personaje: '👩‍⚕️ Dra. Elena',
-                rol: 'Jefa de Coordinación',
-                dialogo: 'La familia de un donante potencial está muy dividida. El cónyuge apoya la donación, pero los hijos se oponen firmemente. ¿Cómo manejas la situación?',
-                opciones: [
-                    { texto: '💬 Facilitar una reunión familiar con apoyo psicológico', icono: '💬', efecto: 'Reputación +20, Estrés -10', stats: { salud: 0, reputacion: 20, estres: -10, camas: 0, organos: 1, lista: -2 } },
-                    { texto: '📝 Respetar la voluntad del donante (si está registrado)', icono: '📝', efecto: 'Reputación +5, Estrés +10', stats: { salud: 0, reputacion: 5, estres: 10, camas: 0, organos: 1, lista: -2 } },
-                    { texto: '⏳ Esperar a que se resuelvan las diferencias', icono: '⏳', efecto: 'Tiempo -5, Estrés +15', stats: { salud: 0, tiempo: -5, reputacion: -10, estres: 15, camas: 0, organos: 0, lista: 0 } }
-                ]
-            },
-            {
-                id: 8,
-                personaje: '🧑‍💼 Sr. Gutiérrez',
-                rol: 'Administrador del Hospital',
-                dialogo: 'Recibimos una donación de un riñón. Pero el paciente receptor tiene una infección leve que podría complicar el trasplante. ¿Procedes o tratas la infección primero?',
-                opciones: [
-                    { texto: '💉 Tratar la infección primero (más seguro, pero el riñón espera)', icono: '💉', efecto: 'Salud +5, Tiempo -3, Reputación +5', stats: { salud: 5, tiempo: -3, reputacion: 5, estres: 0, camas: 0, organos: 0, lista: 0 } },
-                    { texto: '🔪 Trasplantar ahora (riesgo de rechazo, pero el riñón es viable)', icono: '🔪', efecto: 'Salud +10, Reputación +10, Estrés +10', stats: { salud: 10, reputacion: 10, estres: 10, camas: -1, organos: -1, lista: -1 } }
-                ]
-            },
-            {
-                id: 9,
-                personaje: '👩‍⚕️ Nurse Carla',
-                rol: 'Coordinadora de Enfermería',
-                dialogo: 'Un paciente de 28 años con leucemia necesita un trasplante de médula ósea. El único donante compatible es su hermano menor de 15 años. ¿Permites que el hermano done?',
-                opciones: [
-                    { texto: '✅ Sí, con evaluación psicológica y consentimiento familiar', icono: '✅', efecto: 'Salud +20, Reputación +20', stats: { salud: 20, reputacion: 20, estres: -5, camas: -1, organos: 0, lista: -1 } },
-                    { texto: '❌ No, es menor de edad y es riesgoso', icono: '❌', efecto: 'Salud -10, Reputación -15', stats: { salud: -10, reputacion: -15, estres: 5, camas: 0, organos: 0, lista: 0 } },
-                    { texto: '⏳ Buscar otro donante en el registro', icono: '⏳', efecto: 'Tiempo -8, Estrés +5', stats: { salud: 0, tiempo: -8, reputacion: -5, estres: 5, camas: 0, organos: 0, lista: 0 } }
-                ]
-            },
-            {
-                id: 10,
-                personaje: '👩‍⚕️ Dra. Elena
+            { id:1, personaje:'👩‍⚕️ Dra. Elena', rol:'Jefa de Coordinación', dialogo:'Tenemos un paciente de 45 años con insuficiencia cardíaca avanzada. Su corazón está al 15% de capacidad. Solo tenemos un corazón disponible y otro paciente de 60 años con una condición similar. ¿A quién priorizas?', opciones:[
+                { texto:'💪 Paciente de 45 años (más joven, más años de vida)', icono:'💪', efecto:'Salud +5, Reputación +10', stats:{ salud:5, reputacion:10, estres:0, camas:0, organos:-1, lista:-1 } },
+                { texto:'👴 Paciente de 60 años (mayor urgencia, peor estado)', icono:'👴', efecto:'Salud -3, Reputación -5, Estrés +5', stats:{ salud:-3, reputacion:-5, estres:5, camas:0, organos:-1, lista:-1 } },
+                { texto:'⏳ Esperar más pruebas (riesgo de perder ambos)', icono:'⏳', efecto:'Salud -10, Tiempo -3, Estrés +10', stats:{ salud:-10, tiempo:-3, reputacion:-5, estres:10, camas:0, organos:0, lista:0 } }
+            ]},
+            { id:2, personaje:'👩‍⚕️ Nurse Carla', rol:'Coordinadora de Enfermería', dialogo:'Tenemos un órgano disponible para trasplante de riñón. Pero hay 3 pacientes compatibles: una adolescente de 16 años, un adulto de 40 años y un adulto mayor de 65 años. ¿Cómo decides?', opciones:[
+                { texto:'👧 Adolescente de 16 años (más años de vida por delante)', icono:'👧', efecto:'Salud +8, Reputación +15', stats:{ salud:8, reputacion:15, estres:0, camas:-1, organos:-1, lista:-1 } },
+                { texto:'👨 Adulto de 40 años (padre de familia, crítico)', icono:'👨', efecto:'Salud +5, Reputación +5', stats:{ salud:5, reputacion:5, estres:0, camas:-1, organos:-1, lista:-1 } },
+                { texto:'👴 Adulto mayor de 65 años (mayor riesgo, pero también merece oportunidad)', icono:'👴', efecto:'Salud +2, Reputación +2, Estrés +3', stats:{ salud:2, reputacion:2, estres:3, camas:-1, organos:-1, lista:-1 } }
+            ]},
+            { id:3, personaje:'🧑‍💼 Sr. Gutiérrez', rol:'Administrador del Hospital', dialogo:'La lista de espera ha crecido un 20%. Tenemos camas limitadas. Un donante potencial acaba de fallecer, pero su familia duda en donar. ¿Cómo manejas la situación con la familia?', opciones:[
+                { texto:'🤝 Hablar con empatía y escuchar sus dudas', icono:'🤝', efecto:'Reputación +15, Estrés -5', stats:{ salud:0, reputacion:15, estres:-5, camas:0, organos:1, lista:-2 } },
+                { texto:'📋 Presentarles datos fríos y estadísticas', icono:'📋', efecto:'Reputación -5, Estrés +5', stats:{ salud:0, reputacion:-5, estres:5, camas:0, organos:0, lista:0 } },
+                { texto:'⏳ Darles tiempo y volver mañana', icono:'⏳', efecto:'Tiempo -5, Estrés +8, Reputación -3', stats:{ salud:0, tiempo:-5, reputacion:-3, estres:8, camas:0, organos:0, lista:0 } }
+            ]},
+            { id:4, personaje:'👩‍⚕️ Dra. Elena', rol:'Jefa de Coordinación', dialogo:'Un paciente con fibrosis pulmonar necesita un trasplante de pulmón urgente. Pero el único pulmón disponible tiene una ligera infección bacteriana controlable. ¿Aceptas el órgano o esperas otro?', opciones:[
+                { texto:'✅ Aceptar el órgano (riesgo asumible, salva vida ahora)', icono:'✅', efecto:'Salud +10, Reputación +10, Estrés +5', stats:{ salud:10, reputacion:10, estres:5, camas:-1, organos:-1, lista:-1 } },
+                { texto:'❌ Rechazar y esperar otro (más seguro, pero el paciente empeora)', icono:'❌', efecto:'Salud -10, Tiempo -3, Estrés +10', stats:{ salud:-10, tiempo:-3, reputacion:-5, estres:10, camas:0, organos:0, lista:0 } }
+            ]},
+            { id:5, personaje:'🧑‍💼 Sr. Gutiérrez', rol:'Administrador del Hospital', dialogo:'Tenemos un donante fallecido con múltiples órganos válidos. Pero el equipo quirúrgico está agotado por una jornada de 12 horas. ¿Realizas los trasplantes ahora o esperas al equipo de mañana?', opciones:[
+                { texto:'⚡ Operar ahora (riesgo de fatiga, pero salvas vidas)', icono:'⚡', efecto:'Salud +15, Reputación +15, Estrés +15', stats:{ salud:15, reputacion:15, estres:15, camas:-2, organos:-2, lista:-3 } },
+                { texto:'😴 Esperar al equipo de mañana (más seguro, pero órganos pueden deteriorarse)', icono:'😴', efecto:'Salud -8, Tiempo -5, Reputación -5', stats:{ salud:-8, tiempo:-5, reputacion:-5, estres:0, camas:0, organos:0, lista:0 } }
+            ]},
+            { id:6, personaje:'👩‍⚕️ Nurse Carla', rol:'Coordinadora de Enfermería', dialogo:'Un paciente con hepatocarcinoma (cáncer de hígado) en fase inicial necesita un trasplante de hígado. Pero hay un paciente con cirrosis avanzada que lleva más tiempo en lista. ¿A quién das prioridad?', opciones:[
+                { texto:'🩺 Paciente con cáncer (riesgo de metástasis, tiempo limitado)', icono:'🩺', efecto:'Salud +5, Reputación +10', stats:{ salud:5, reputacion:10, estres:0, camas:-1, organos:-1, lista:-1 } },
+                { texto:'🫂 Paciente con cirrosis (más tiempo en lista, riesgo de muerte inminente)', icono:'🫂', efecto:'Salud +8, Reputación +5', stats:{ salud:8, reputacion:5, estres:0, camas:-1, organos:-1, lista:-1 } },
+                { texto:'⚖️ Evaluar ambos casos con comité médico', icono:'⚖️', efecto:'Tiempo -3, Reputación +5', stats:{ salud:0, tiempo:-3, reputacion:5, estres:0, camas:0, organos:0, lista:0 } }
+            ]},
+            { id:7, personaje:'👩‍⚕️ Dra. Elena', rol:'Jefa de Coordinación', dialogo:'La familia de un donante potencial está muy dividida. El cónyuge apoya la donación, pero los hijos se oponen firmemente. ¿Cómo manejas la situación?', opciones:[
+                { texto:'💬 Facilitar una reunión familiar con apoyo psicológico', icono:'💬', efecto:'Reputación +20, Estrés -10', stats:{ salud:0, reputacion:20, estres:-10, camas:0, organos:1, lista:-2 } },
+                { texto:'📝 Respetar la voluntad del donante (si está registrado)', icono:'📝', efecto:'Reputación +5, Estrés +10', stats:{ salud:0, reputacion:5, estres:10, camas:0, organos:1, lista:-2 } },
+                { texto:'⏳ Esperar a que se resuelvan las diferencias', icono:'⏳', efecto:'Tiempo -5, Estrés +15', stats:{ salud:0, tiempo:-5, reputacion:-10, estres:15, camas:0, organos:0, lista:0 } }
+            ]},
+            { id:8, personaje:'🧑‍💼 Sr. Gutiérrez', rol:'Administrador del Hospital', dialogo:'Recibimos una donación de un riñón. Pero el paciente receptor tiene una infección leve que podría complicar el trasplante. ¿Procedes o tratas la infección primero?', opciones:[
+                { texto:'💉 Tratar la infección primero (más seguro, pero el riñón espera)', icono:'💉', efecto:'Salud +5, Tiempo -3, Reputación +5', stats:{ salud:5, tiempo:-3, reputacion:5, estres:0, camas:0, organos:0, lista:0 } },
+                { texto:'🔪 Trasplantar ahora (riesgo de rechazo, pero el riñón es viable)', icono:'🔪', efecto:'Salud +10, Reputación +10, Estrés +10', stats:{ salud:10, reputacion:10, estres:10, camas:-1, organos:-1, lista:-1 } }
+            ]},
+            { id:9, personaje:'👩‍⚕️ Nurse Carla', rol:'Coordinadora de Enfermería', dialogo:'Un paciente de 28 años con leucemia necesita un trasplante de médula ósea. El único donante compatible es su hermano menor de 15 años. ¿Permites que el hermano done?', opciones:[
+                { texto:'✅ Sí, con evaluación psicológica y consentimiento familiar', icono:'✅', efecto:'Salud +20, Reputación +20', stats:{ salud:20, reputacion:20, estres:-5, camas:-1, organos:0, lista:-1 } },
+                { texto:'❌ No, es menor de edad y es riesgoso', icono:'❌', efecto:'Salud -10, Reputación -15', stats:{ salud:-10, reputacion:-15, estres:5, camas:0, organos:0, lista:0 } },
+                { texto:'⏳ Buscar otro donante en el registro', icono:'⏳', efecto:'Tiempo -8, Estrés +5', stats:{ salud:0, tiempo:-8, reputacion:-5, estres:5, camas:0, organos:0, lista:0 } }
+            ]},
+            { id:10, personaje:'👩‍⚕️ Dra. Elena', rol:'Jefa de Coordinación', dialogo:'¡Último escenario! Un paciente con insuficiencia hepática fulminante llegó a la sala de emergencias. Solo tenemos un hígado disponible, pero está a 3 horas de distancia. El paciente tiene 6 horas de vida. ¿Qué haces?', opciones:[
+                { texto:'🚁 Enviar helicóptero por el órgano (rápido, pero costoso)', icono:'🚁', efecto:'Salud +25, Reputación +25, Estrés +10', stats:{ salud:25, reputacion:25, estres:10, camas:-1, organos:-1, lista:-1 } },
+                { texto:'🚑 Enviar ambulancia (más lento, pero factible)', icono:'🚑', efecto:'Salud +15, Reputación +10', stats:{ salud:15, reputacion:10, estres:5, camas:-1, organos:-1, lista:-1 } },
+                { texto:'❌ No asumir el riesgo (el paciente podría no sobrevivir al trasplante)', icono:'❌', efecto:'Salud -20, Reputación -30, Estrés +20', stats:{ salud:-20, reputacion:-30, estres:20, camas:0, organos:0, lista:0 } }
+            ]}
+        ];
+
+        let juegoActual = 0;
+        let juegoStats = { salud:100, tiempo:15, reputacion:80, estres:0, camas:8, organos:2, lista:14 };
+        let juegoFase = 0;
+        const TOTAL_FASES = 5;
+        const ESCENARIOS_POR_FASE = 2;
+        let juegoBloqueado = false;
+
+        function iniciarJuego() {
+            juegoActual = 0;
+            juegoStats = { salud:100, tiempo:15, reputacion:80, estres:0, camas:8, organos:2, lista:14 };
+            juegoFase = 0;
+            juegoBloqueado = false;
+            document.getElementById('juego-bar').style.width = '0%';
+            document.getElementById('juego-feedback-flash')?.remove();
+            mostrarEscenario();
+        }
+
+        function mostrarEscenario() {
+            if (juegoActual >= escenariosJuego.length) {
+                finalizarJuego();
+                return;
+            }
+            const esc = escenariosJuego[juegoActual];
+            const faseActual = Math.floor(juegoActual / ESCENARIOS_POR_FASE);
+            juegoFase = faseActual;
+            document.getElementById('juego-fase').textContent = `Fase ${faseActual+1}/${TOTAL_FASES}`;
+            document.getElementById('juego-fase-actual').textContent = `📌 Fase ${faseActual+1}/${TOTAL_FASES}`;
+            const progreso = (juegoActual / escenariosJuego.length) * 100;
+            document.getElementById('juego-bar').style.width = progreso + '%';
+            document.querySelectorAll('.juego-timeline .dot').forEach((dot, idx) => {
+                dot.classList.remove('active','done');
+                if (idx < faseActual) dot.classList.add('done');
+                else if (idx === faseActual) dot.classList.add('active');
+            });
+            document.querySelector('.juego-timeline span:last-child').textContent = `Fase ${faseActual+1}/${TOTAL_FASES}`;
+            document.getElementById('juego-personaje').innerHTML = `${esc.personaje} <span class="rol">(${esc.rol})</span>`;
+            document.getElementById('juego-parrafo').innerHTML = esc.dialogo;
+            const container = document.getElementById('juego-opts');
+            container.innerHTML = '';
+            esc.opciones.forEach((opt, idx) => {
+                const btn = document.createElement('button');
+                btn.innerHTML = `<span class="opt-icon">${opt.icono}</span><span class="opt-text">${opt.texto}</span><span class="opt-effect">${opt.efecto}</span>`;
+                btn.addEventListener('click', () => seleccionarOpcion(idx));
+                container.appendChild(btn);
+            });
+            actualizarStatsUI();
+            juegoBloqueado = false;
+        }
+
+        function seleccionarOpcion(idx) {
+            if (juegoBloqueado) return;
+            juegoBloqueado = true;
+            const esc = escenariosJuego[juegoActual];
+            const opt = esc.opciones[idx];
+            const stats = opt.stats;
+            juegoStats.salud = Math.max(0, Math.min(100, juegoStats.salud + (stats.salud || 0)));
+            juegoStats.tiempo = Math.max(0, Math.min(20, juegoStats.tiempo + (stats.tiempo || 0)));
+            juegoStats.reputacion = Math.max(0, Math.min(100, juegoStats.reputacion + (stats.reputacion || 0)));
+            juegoStats.estres = Math.max(0, Math.min(100, juegoStats.estres + (stats.estres || 0)));
+            juegoStats.camas = Math.max(0, juegoStats.camas + (stats.camas || 0));
+            juegoStats.organos = Math.max(0, juegoStats.organos + (stats.organos || 0));
+            juegoStats.lista = Math.max(0, juegoStats.lista + (stats.lista || 0));
+            actualizarStatsUI();
+            const flash = document.createElement('div');
+            flash.className = 'juego-feedback-flash';
+            flash.textContent = stats.salud > 0 ? '💚' : stats.salud < 0 ? '⚠️' : '✅';
+            document.body.appendChild(flash);
+            setTimeout(() => flash.remove(), 1200);
+            const parrafo = document.getElementById('juego-parrafo');
+            const efectoTexto = opt.efecto;
+            const icono = stats.salud > 0 ? '✅' : stats.salud < 0 ? '❌' : '📌';
+            parrafo.innerHTML = `<strong>${icono} Decisión tomada:</strong> ${opt.texto}<br /><span style="color:${stats.salud > 0 ? '#4CAF50' : stats.salud < 0 ? '#ff6b6b' : '#ffcc00'};">${efectoTexto}</span>`;
+            document.querySelectorAll('#juego-opts button').forEach(b => b.disabled = true);
+            setTimeout(() => {
+                juegoActual++;
+                if (juegoActual >= escenariosJuego.length) {
+                    finalizarJuego();
+                } else {
+                    mostrarEscenario();
+                }
+            }, 2000);
+        }
+
+        function actualizarStatsUI() {
+            document.getElementById('juego-salud').textContent = `❤️ Salud: ${juegoStats.salud}`;
+            document.getElementById('juego-tiempo').textContent = `⏱️ Tiempo: ${juegoStats.tiempo}`;
+            document.getElementById('juego-reputacion').textContent = `⭐ Reputación: ${juegoStats.reputacion}`;
+            document.getElementById('juego-estres').textContent = `😰 Estrés: ${juegoStats.estres}`;
+            document.getElementById('h-camas').textContent = juegoStats.camas;
+            document.getElementById('h-organos').textContent = juegoStats.organos;
+            document.getElementById('h-lista').textContent = juegoStats.lista;
+        }
+
+        function finalizarJuego() {
+            document.getElementById('juego-bar').style.width = '100%';
+            document.querySelectorAll('.juego-timeline .dot').forEach(d => d.classList.add('done'));
+            const summary = `
+                <div class="juego-final">
+                    <div class="big">🏥</div>
+                    <div class="title">¡Misión cumplida, coordinador!</div>
+                    <div class="summary">
+                        Has gestionado el hospital con éxito.<br />
+                        <span>Salud:</span> ${juegoStats.salud}% &nbsp;|&nbsp; <span>Reputación:</span> ${juegoStats.reputacion}%<br />
+                        <span>Camas disponibles:</span> ${juegoStats.camas} &nbsp;|&nbsp; <span>Órganos disponibles:</span> ${juegoStats.organos}<br />
+                        <span>Lista de espera:</span> ${juegoStats.lista} personas<br />
+                        <span style="color:#ffcc00;">¡Tu liderazgo ha salvado vidas!</span>
+                    </div>
+                </div>
+            `;
+            document.getElementById('juego-text').innerHTML = summary;
+            document.getElementById('juego-opts').innerHTML = '';
+            document.getElementById('juego-parrafo').innerHTML = '';
+            document.getElementById('final-msg').innerHTML = `
+                <strong>¡Has completado el Juego "Coordinador de Trasplantes"!</strong><br />
+                Salud: ${juegoStats.salud}% · Reputación: ${juegoStats.reputacion}%<br />
+                Camas: ${juegoStats.camas} · Órganos: ${juegoStats.organos} · Lista de espera: ${juegoStats.lista}<br />
+                <span style="color:var(--primary);">"Un coordinador excelente marca la diferencia entre la vida y la muerte."</span>
+            `;
+        }
+
+        window.iniciarJuego = iniciarJuego;
+
+        console.log('🚀 DONA VIDA cargado correctamente.');
+    </script>
+</body>
+</html>
